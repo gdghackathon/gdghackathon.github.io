@@ -1,0 +1,63 @@
+<!doctype html>
+<html ng-app="GDGStudentHackathon">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>GDG Student Hackathon 2014</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css"></link>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxdvktF7XPvP04WQ5RCpiNMZscqbLR-Po"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-route/angular-route.min.js"></script>
+	<script src="bower_components/angular-timer/app/js/timer.js"></script>
+	<script src="bower_components/lodash/dist/lodash.underscore.min.js"></script>
+	<script src="bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body ng-controller="IndexController">
+    <div class="container header-container">
+        <header>
+        	<div class="row">
+				<div class="col-md-7">
+					<div class="img-header">
+						<a href="/"><img src="images/mainlogo.png" alt="mainlogo"></a>
+					</div>
+					<h4 class="location-text">2014.8.23 - 24 <a href="https://goo.gl/maps/Qpiyt" class="location-link">마루 180 <span class="fa fa-globe"></span></a></h4>
+				</div>
+				<div class="col-md-5">
+					<nav class="pull-right">
+						<ul class="nav nav-pills">
+							<li ng-class="{active:location==='/'}"><a href="/">HOME</a></li>
+							<li ng-class="{active:location==='/topic'}"><a href="#/topic">TOPIC</a></li>
+							<li ng-class="{active:location==='/info'}"><a href="#/info">행사 안내</a></li>
+						</ul>
+					</nav>
+				</div>
+        	</div>
+      </header>  
+    </div>
+    
+	<div class="content-wrap">
+		<div class="container" ng-view>
+
+		</div>
+	</div>
+	
+	<footer>
+		<div class="container">
+			<p class="credit pull-left left-credit">
+				<small>Copyright © <a href="https://plus.google.com/communities/101463090584658665422">GDG SSU</a> 2014. All rights reserved.</small>
+			</p>
+			<p class="credit pull-right">
+				<small>Sponsed by <img src="images/google-logo.png"></small>
+			</p>
+		</div>
+	</footer>
+
+  </body>
+</html>
