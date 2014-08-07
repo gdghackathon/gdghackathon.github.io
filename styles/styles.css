@@ -77,6 +77,10 @@ section {
     margin-bottom: 0;
 }
 
+.text-muted {
+	color: #bebebe;
+}
+
 /* Main */
 
 .join-btn-wrap {
