@@ -12,6 +12,10 @@ app.config(['$routeProvider', function ($routeProvider) {
 						templateUrl: 'views/topic.html',
 						controller: 'TopicController'
 					})
+					.when('/schedule', {
+						templateUrl: 'views/schedule.html',
+						controller: 'ScheduleController'
+					})
 					.when('/info', {
 						templateUrl: 'views/info.html',
 						controller: 'InfoController'
@@ -28,6 +32,11 @@ app.controller('IndexController', ['$scope','$rootScope','$location',
 }]);
 
 app.controller('TopicController', ['$scope','$rootScope','$location', 
+	function ($scope, $rootScope, $location) {
+		$rootScope.location = $location.path();
+}]);
+
+app.controller('ScheduleController', ['$scope','$rootScope','$location',
 	function ($scope, $rootScope, $location) {
 		$rootScope.location = $location.path();
 }]);
